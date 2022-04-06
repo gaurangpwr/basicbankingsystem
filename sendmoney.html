@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>World Wide Bank</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cover/">
+  <link rel="stylesheet" href="./Assets/Style.css">
+  <script src="https://kit.fontawesome.com/455db96e81.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+
+<body class="d-flex h-100 text-center bg-dark">
+
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div class="text-white">
+        <h3 class="float-md-start mb-0">World Wide Bank</h3>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+          <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+          <a class="nav-link btn btn-outline-success active" href="#">Send Money</a>
+        </nav>
+      </div>
+    </header>
+
+
+<div class="text-white">
+    <h1>Name: Gaurang Pawar</h1>
+    <h3>Account Balance: RS <span id="myAccountBalance">1500000</span> </h3>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sendMoney">
+    Send Money
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="sendMoney" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" id="exampleModalLabel">Send Money</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="enterName" placeholder="Recipient's Name" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <span class="input-group-text" id="basic-addon2">Name</span>
+              </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Rs</span>
+                <input type="text" id="enterAmount" class="form-control" aria-label="Amount (to the nearest dollar)">
+                <span class="input-group-text">.00</span>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" onclick="sendMoney()" class="btn btn-primary" data-bs-dismiss="modal">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TABLE -->
+<div class="container pt-5">
+<table id="example" class="table table-striped text- bg-white" style="width:100%">
+    <thead>
+        <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>A/c No</th>
+            <th>Balance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>01</td>
+            <td>Tiger</td>            
+            <td>00000001</td>
+            <td>
+                 <p id="tigerBankBalance">4500</p>
+            </td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Brielle</td>
+            <td>00000002</td>
+            <td>
+                <p id="brielleBankBalance">12500</p>
+           </td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Herrod</td>
+            <td>00000003</td>
+            <td>
+                <p id="rerrodBankBalance">8000</p>
+           </td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Rhona</td>
+            <td>00000004</td>
+            <td>
+                <p id="rhonaBankBalance">50000</p>
+           </td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>Colleen</td>
+            <td>00000005</td>
+            <td>
+                <p id="colleenBankBalance">4400</p>
+           </td>
+        </tr>
+        <tr>
+            <td>06</td>
+            <td>Sonya</td>
+            <td>00000006</td>
+            <td>
+                <p id="sonyaBankBalance">300</p>
+           </td>
+        </tr>
+        <tr>
+            <td>07</td>
+            <td>Jena</td>
+            <td>00000007</td>
+            <td>
+                <p id="jenaBankBalance">4120</p>
+           </td>
+        </tr>
+        <tr>
+            <td>08</td>
+            <td>Quinn</td>
+            <td>00000008</td>
+            <td>
+                <p id="quinnBankBalance">11000</p>
+           </td>
+        </tr>
+        <tr>
+            <td>09</td>
+            <td>Charde</td>
+            <td>00000009</td>
+            <td>
+                <p id="chardeBankBalance">5200</p>
+           </td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Haley</td>
+            <td>00000010</td>
+            <td>
+                <p id="haleyBankBalance">68000</p>
+           </td>
+        </tr>
+        </tr>       
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>Sl No</th>
+            <th>Name</th>
+            <th>A/c No</th>
+            <th>Balance</th>
+        </tr>
+    </tfoot>
+</table>
+</div>
+<!-- TABLE -->
+
+    <footer class="mt-auto text-white-50">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <p>This Project is Made by Gaurang Pawar</p>
+          </div>
+          <div class="col">
+            <ul class="social-icons">
+              Follow Me:
+              <li><a target="_blank" class="github" href="https://github.com/gaurangpwr"><i
+                    class="fab fa-github fa-2x"></i></a></li>
+
+              <li><a target="_blank" class="linkedin" href="https://www.linkedin.com/in/gaurang-pawar-620a40213/"><i
+                    class="fab fa-linkedin fa-2x"></i></a></li>
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+</body>
+<script src="./Assets/script.js"></script>
+
+</html>
